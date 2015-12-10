@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+      <!--Hi, I'm Thitipol and I'm making this site as a portfolio site
+      thanks to the html5 boiler plate and incredible data-visualization tools
+      by these incredible developers.-->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Life Under Thai Junta by Number</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!--Load the AJAX API-->
+        <!--Load the AJAX API-->
+           <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+           <script type="text/javascript">
+
+           google.load('visualization', '1', {packages: ['corechart', 'bar']});
+google.setOnLoadCallback(drawStacked);
+google.setOnLoadCallback(drawCurve);
+google.setOnLoadCallback(drawCurve1);
+google.setOnLoadCallback(drawCurve2);
+
+function drawCurve2() {
+      var data = google.visualization.arrayToDataTable([
+        [	'Month'	,	'Rubber price'	],
+[	'1/09'	,	46.32	],
+[	'2/09'	,	46.37	],
+[	'3/09'	,	46.46	],
+[	'4/09'	,	51.64	],
+[	'5/09'	,	54.46	],
+[	'6/09'	,	52.13	],
+[	'7/09'	,	54.07	],
+[	'8/09'	,	63.44	],
+[	'9/09'	,	66.82	],
+[	'10/09'	,	71.31	],
+[	'11/09'	,	76.8	],
+[	'12/09'	,	83.65	],
+[	'1/10'	,	92.97	],
+[	'2/10'	,	95.97	],
+[	'3/10'	,	101.41	],
+[	'4/10'	,	112.26	],
+[	'5/10'	,	105.64	],
+[	'6/10'	,	109.76	],
+[	'7/10'	,	100.03	],
+[	'8/10'	,	99.07	],
+[	'9/10'	,	102.54	],
+[	'10/10'	,	106.49	],
+[	'11/10'	,	118.35	],
+[	'12/10'	,	130.96	],
+[	'1/11'	,	154.6	],
+[	'2/11'	,	174.44	],
+[	'3/11'	,	144.75	],
+[	'4/11'	,	158.21	],
+[	'5/11'	,	143.46	],
+[	'6/11'	,	137.52	],
+[	'7/11'	,	129.73	],
+[	'8/11'	,	127.75	],
+[	'9/11'	,	126.08	],
+[	'10/11'	,	111.99	],
+[	'11/11'	,	90.87	],
+[	'12/11'	,	89.7	],
+[	'1/12'	,	100.52	],
+[	'2/12'	,	110.96	],
+[	'3/12'	,	108.81	],
+[	'4/12'	,	107.54	],
+[	'5/12'	,	104.82	],
+[	'6/12'	,	91.54	],
+[	'7/12'	,	89.28	],
+[	'8/12'	,	81.12	],
+[	'9/12'	,	83.06	],
+[	'10/12'	,	86.73	],
+[	'11/12'	,	78.93	],
+[	'12/12'	,	82.57	],
+[	'1/13'	,	87.49	],
+[	'2/13'	,	84.39	],
+[	'3/13'	,	78.73	],
+[	'4/13'	,	74.51	],
+[	'5/13'	,	82.88	],
+[	'6/13'	,	79.21	],
+[	'7/13'	,	72.39	],
+[	'8/13'	,	72.31	],
+[	'9/13'	,	77.74	],
+[	'10/13'	,	74.06	],
+[	'11/13'	,	72.14	],
+[	'12/13'	,	73.51	],
+[	'1/14'	,	67.99	],
+[	'2/14'	,	62.7	],
+[	'3/14'	,	67.01	],
+[	'4/14'	,	64.28	],
+[	'5/14'	,	61.36	],
+[	'6/14'	,	62.77	],
+[	'7/14'	,	59.07	],
+[	'8/14'	,	53.68	],
+[	'9/14'	,	48.42	],
+[	'10/14'	,	48.25	],
+[	'11/14'	,	48.52	],
+[	'12/14'	,	50.22	],
+[	'1/15'	,	57.93	],
+[	'2/15'	,	58.55	],
+[	'3/15'	,	51.11	],
+[	'4/15'	,	49	],
+[	'5/15'	,	55.98	],
+[	'6/15'	,	57.15	],
+[	'7/15'	,	50.84	],
+[	'8/15'	,	46.95	],
+[	'9/15'	,	43.29	],
+[	'10/15'	,	41.06	]
+      ]);
+
+      var options = {
+        title: 'Company Performance',
+        curveType: 'function',
+        backgroundColor: 'black',
+        hAxis: {textStyle:{color: 'white'}},
+        vAxis: {textStyle:{color: 'white'}},
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+      chart.draw(data, options);
+    }
+
+
+function drawCurve1() {
+      var data = google.visualization.arrayToDataTable([
+        ['Month', '2014', '2015'],
+        [	'Feb'	,	33.14, 33.1]	,
+        [	'May'	,	31.3, 31.51]	,
+        [	'Jul'	,	31.47, 31.38]	,
+        [	'Aug'	,	31.52, 31.51]
+      ]);
+
+      var options = {
+        title: 'Mental Health Index',
+        curveType: 'function',
+        backgroundColor: 'black',
+        hAxis: {textStyle:{color: 'white'}},
+        vAxis: {textStyle:{color: 'white'}},
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
+
+      chart.draw(data, options);
+    }
+
+function drawCurve() {
+      var data = google.visualization.arrayToDataTable([
+        ['Month', ''],
+        [	'5/2014'	,	1415.73	]	,
+[	'6/14'	,	1485.75	]	,
+[	'7/14'	,	1502.39	]	,
+[	'8/14'	,	1561.63	]	,
+[	'9/14'	,	1585.67	]	,
+[	'10/14'	,	1584.16	]	,
+[	'11/14'	,	1593.91	]	,
+[	'12/14'	,	1497.67	]	,
+[	'1/15'	,	1581.25	]	,
+[	'2/15'	,	1587.01	]	,
+[	'3/15'	,	1505.94	]	,
+[	'4/15'	,	1526.74	]	,
+[	'5/15'	,	1496.05	]	,
+[	'6/15'	,	1504.55	]	,
+[	'7/15'	,	1440.12	]	,
+[	'8/15'	,	1382.41	]	,
+[	'9/15'	,	1349	]	,
+[	'10/15'	,	1394.94	]	,
+[	'11/15'	,	1359.7	]
+
+      ]);
+
+      var options = {
+        title: 'SET Index',
+        curveType: 'function',
+        backgroundColor: 'black',
+        hAxis: {textStyle:{color: 'white'}},
+        vAxis: {textStyle:{color: 'white'}},
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+
+function drawStacked() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Regime');
+    data.addColumn('number', 'months in power');
+    data.addColumn('number', 'Roadmap plan');
+
+    data.addRows([
+      ['Field Marshal Thanom Kittikachorn', 23, 0],
+      ['Adm Sangud Chaloryu', 12, 0],
+      ['Adm Sangud Chaloryu', 18, 0],
+      ['Gen Sunthorn Kongsompong', 15, 0],
+      ['Gen Sonthi Boonyaratglin', 15, 0],
+      ['Gen Prayuth Chan-ocha', 18, 18],
+    ]);
+
+    var options = {
+      'width':"100%",
+      'height':'250',
+      isStacked: true,
+      backgroundColor: 'black',
+      legend: {position: 'none'},
+      hAxis: {textStyle:{color: 'white'}},
+      vAxis: {textStyle:{color: 'white'}},
+      animation: {"startup": true,
+      duration: 1000},
+      vAxis: {
+        title: 'Months in power'
+      }
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  };
+
+  $(window).resize(function(){
+   drawStacked();
+   drawCurve();
+   drawCurve1();
+   drawCurve2();
+})
+//end of Coup time chart
+
+//end of curve chart
+
+
+//['x', 'Field Marshal Thanom Kittikachorn', 'Adm Sangud Chaloryu', 'Adm Sangud Chaloryu', 'Gen Sunthorn Kongsompong', 'Gen Sonthi Boonyaratglin', 'Gen Prayuth Chan-ocha', 'Gen Prayuth Chan-ocha by mid 2017'],
+//['Months', 23, 12, 18, 15, 15, 18, 36],
+               // Set chart options
+
+           </script>
+         </head>
+
+             <body>
+      <div class="header-unit">
+      <div id="video-container">
+      <video autoplay loop class="fillWidth">
+      <source src="thaipbs.mp4" type="video/mp4"/>
+      <source src="thaipbs.webm" type="video/webm"/>
+      Your browser does not support the video tag. I suggest you upgrade your browser.
+      </video>
+      </div><!-- end video-container -->
+      <div class="headline">
+        <h1><br></h1>
+      </div>
+<div id="col-centered" class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+      <h1><br>Life Under Thai Junta by Number</h1>
+    </div>
+<div id="col-centered" class="col-xs-12 col-sm-4 col-lg-4 col-md-4">
+
+<p>On May 22, 2014, after months of street protests, the Thai military staged a coup and seized power from Pheu Thai government.
+Led by General Prayuth Chan-ocha, the coupmakers established the National
+Council for Peace and Order and formed a military government to rule the country.
+
+<br><br>Touted to solve what seemed like a deadlock in Thai politics, the junta promised to deliver happy, peaceful and corruption-free country. What do Thais get at expense of their rights?</p>
+<p><br>compiled by Thitipol Panyalimpanun</p>
+      </div>
+      </div><!-- end .header-unit -->
+
+      <div class="container" id="content">
+
+          <!-- Example row of columns -->
+          <div class="row" id="time">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-centered" id="countup">
+
+                <p id="days">00</p>
+                <p class="timeRefDays">days</p>
+                <p id="hours">00</p>
+                <p class="timeRefHours">hours</p>
+                <p id="minutes">00</p>
+                <p class="timeRefMinutes">minutes</p>
+                <p id="seconds">00</p>
+                <p class="timeRefSeconds">seconds since May 22, 2014</p>
+              </div>
+              </div>
+
+<script>
+/*
+* Basic Count Up from Date and Time
+* Author: @mrwigster / trulycode.com
+*/
+window.onload=function() {
+                // Month,Day,Year,Hour,Minute,Second
+                upTime('may,22,2014,00:00:00'); // ****** Change this line!
+              }
+              function upTime(countTo) {
+                now = new Date();
+                countTo = new Date(countTo);
+                difference = (now-countTo);
+
+                days=Math.floor(difference/(60*60*1000*24)*1);
+                hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
+                mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
+                secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+
+                document.getElementById('days').firstChild.nodeValue = days;
+                document.getElementById('hours').firstChild.nodeValue = hours;
+                document.getElementById('minutes').firstChild.nodeValue = mins;
+                document.getElementById('seconds').firstChild.nodeValue = secs;
+
+                clearTimeout(upTime.to);
+                upTime.to=setTimeout(function(){ upTime(countTo); },1000);
+              }
+</script>
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+              <h2>Breaking the record</h2>
+              <p>Last Semtember, the junta announced a new roadmap plan to stay in power for 20 more months, promising an election in mid-2017. By that time, Thai people will get the longest-running military government
+              in Thailand since 1958, according to <a href="http://www.prachatai.com/journal/2015/09/61653">Prachatai</a>
+              </p>
+          </div>
+
+          <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+          <div id="chart_div"></div>
+          </div>
+
+          <div class="row">
+<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+  <h2>Are people happier?</h2>
+  <p>Although the junta's famous "Return of Happiness" campaign has faded, General Prayuth still
+    continues as a host of the Return of Happiness TV program every Friday. Streets are quiet
+    most of the time while the number of prosectution of the junta's oppositions is rising.
+    The mental health index from by Department of Mental Health shows that,
+    despite all the measures, the change is nominal from last year.  </p>
+</div>
+<div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+<div id="curve_chart1"></div>
+</div>
+</div>
+
+<div class="row"></div>
+  <div class="col-md-3 col-lg-3 col-sm-7 col-xs-12">
+  <img src="http://placehold.it/300x150">
+</div>
+<div class="col-md-3 col-lg-3 col-sm-7 col-xs-12">
+  <img src="http://placehold.it/350x150">
+</div><div class="col-md-3 col-lg-3 col-sm-7 col-xs-12">
+  <img src="http://placehold.it/350x150">
+</div>
+
+
+  <div class="col-md-4 col-lg-4 col-sm-12 col-cs-12">
+    <h2>Prevalent oppression</h2>
+    <p>Aggressively cracking down on activists and its critics,
+      the junta has summoned and detained from journalist
+      Pravit Rojanapirom to Thairath Newspaper's cartoonist SiaTK,
+      The freedom of expression was asked to be withhled for the sake
+      of peace and happiness.<br>
+  </div>
+
+  <div class="col-md-7 col-lg-7 col-sm-12 col-cs-12">
+
+                   <p>Last month
+                  Mark Kent, UK Embassador to Thailand, took a piss at the farcical political situation.</p>
+
+                  <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I had hoped the fact 200 people allowed to demonstrate at the US Embassy, might be relaxation on freedom of assembly <a href="https://t.co/GRrQ9t7Vzj">https://t.co/GRrQ9t7Vzj</a></p>&mdash; Mark Kent (@KentBKK) <a href="https://twitter.com/KentBKK/status/673714448830357506">December 7, 2015</a></blockquote>
+                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <p>    The embassador is now being investigated for supporting the "anti-order" group.
+                </p>
+</div>
+
+
+          <div class="row"></div>
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+              <h2>Thai stock market</h2>
+              <p>The Thai stock market responded well to the coup on May 22, 2014.
+              Along with other factors, today the market TKTKT stands below when tktk.</p>
+</div>
+<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+<div id="curve_chart" class="row"></div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+  <div id="curve_chart2"</div>
+</div>
+</div>
+
+
+
+
+          <hr>
+          <footer>
+
+          </footer>
+        </div>
+        <!-- /container -->
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-70243306-1','auto');ga('send','pageview');
+        </script>
+
+
+    </body>
+</html>
+https://twitter.com/KentBKK/status/673714448830357506

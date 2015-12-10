@@ -1,0 +1,105 @@
+p, h1, h2, h3, h4, h5 {
+  font-family:  "Courier New",
+"Lucida Console", monospace;
+ color: white;
+}
+
+h1, h2, h3, a {
+  text-shadow:1px 1px gold;
+}
+
+#chart_div {
+}
+
+div #happiness {
+  color: white;
+}
+
+#countup p {
+display: inline-block;
+padding: 5px;
+margin-top: 10px;
+font-size: 2.8em;
+line-height: 0.8;
+text-align: center;
+}
+
+body {
+  background-color: black !important ;
+  width:100%;
+}
+
+#time {
+  background-color: black;
+  color:white;
+}
+
+#widget {
+  background-color: grey;
+}
+
+#col-centered {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.col-centered
+{
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-unit {
+  height: 600px;
+  border: none;
+  border-right:none;
+  border-left: none;
+  position: relative;
+  padding: 20px;
+}
+#video-container {
+	position: absolute;
+}
+#video-container {
+  top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+video {
+	position:absolute;
+	z-index:-1;
+}
+video.fillWidth {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  -webkit-filter: opacity(.5);
+filter: opacity(.5);
+}
+#banner {
+  height: 900px;
+  overflow: hidden;
+}
+
+#banner img {
+  z-index: -1;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  -webkit-filter: opacity(.7);
+filter: opacity(.5);
+height:100%;
+}
